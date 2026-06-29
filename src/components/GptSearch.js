@@ -4,7 +4,7 @@ import GptSearchBar from "./GptSearchBar";
 
 const GPTSearch = () => {
     return (
-        <div>
+        <div className="min-h-screen overflow-y-scroll scrollbar-hide">
         <div className="fixed -z-10">
         <img src={BG_URL}
         alt="backgroundImage"
