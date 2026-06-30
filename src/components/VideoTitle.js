@@ -1,4 +1,8 @@
-const VideoTitle = ({title, overview}) => {
+import { useNavigate } from "react-router-dom";
+
+const VideoTitle = ({title, overview, id}) => {
+    const navigate = useNavigate();
+
     return (
         <div className="w-screen aspect-video pt-[35%] md:pt-[15%] px-4 md:px-12 absolute text-white bg-gradient-to-r from-black">
             <h1 className="text-lg md:text-4xl font-bold w-3/4 md:w-full">{title}</h1>
@@ -10,7 +14,9 @@ const VideoTitle = ({title, overview}) => {
                     </svg>
                     Play
                 </button>
-                <button className="bg-gray-500 text-white p-1 md:p-2 px-4 md:px-10 bg-opacity-50 rounded-lg text-xs md:text-base">
+                <button
+                onClick={() => navigate("/movie/" +id)}
+                className="bg-gray-500 text-white p-1 md:p-2 px-4 md:px-10 bg-opacity-50 rounded-lg text-xs md:text-base">
                     More Info
                 </button>
             </div>
